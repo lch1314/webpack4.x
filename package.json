@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "bundle": "webpack"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
