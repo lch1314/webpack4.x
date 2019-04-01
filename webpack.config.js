@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+    mode: 'development',                              // 不写的mode，默认就是生产模式
     entry: './src/index.js',                         // 入口文件
     output: {
         filename: 'bundle.js',                       // 打包好之后的名字，之前默认是叫main.js 这里我们改为bundle.js
