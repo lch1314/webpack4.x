@@ -86,14 +86,26 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/04.jpg":
+/*!********************!*\
+  !*** ./src/04.jpg ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"images/04.jpg\";\n\n//# sourceURL=webpack:///./src/04.jpg?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("function component() {\r\n    var element = document.createElement('div');\r\n    element.innerHTML = 'hello webapck';\r\n  \r\n    return element;\r\n  }\r\n  \r\n  document.body.appendChild(component());\n\n//# sourceURL=webpack:///./src/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _04_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./04.jpg */ \"./src/04.jpg\");\n/* harmony import */ var _04_jpg__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_04_jpg__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\nvar img = new Image();\r\nimg.src = _04_jpg__WEBPACK_IMPORTED_MODULE_0___default.a;\r\n\r\nvar root = document.getElementById('root');\r\nroot.append(img);\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
