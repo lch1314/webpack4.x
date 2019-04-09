@@ -29,13 +29,16 @@ module.exports = {
                     {
                         loader: 'css-loader',
                         options: {
-                            importLoaders: 2,
-                            modules: true
+                            importLoaders: 2
                         }
                     },
                     'postcss-loader',
                     'sass-loader'
                 ]
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
+                use: ['file-loader']
             }
         ]
     }
