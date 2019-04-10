@@ -4,10 +4,14 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     mode: 'development',                             
-    entry: './src/index.js',                        
+    entry: {
+        main: './src/index.js',
+        sub: './src/index.js'
+    },                        
     output: {
-        filename: 'dist.js',                      
-        path: path.resolve(__dirname, 'dist')        
+        filename: '[name].js',                      
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: 'http://cdn.com.cn'        
     },
     module: {
         rules: [

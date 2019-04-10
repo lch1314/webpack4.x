@@ -77,7 +77,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "http://cdn.com.cn";
 /******/
 /******/
 /******/ 	// Load entry module and return exports
@@ -161,7 +161,7 @@ eval("module.exports = __webpack_require__.p + \"4bba583098563e64f4b12ab1d27cd51
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = \"data:image/svg+xml;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICI1NDcxOGJkMDZlN2VlNmM4N2I5ZTJmNDFjOTY4NTFlYS5zdmciOw==\"\n\n//# sourceURL=webpack:///./src/font/iconfont.svg?");
+eval("module.exports = \"data:image/svg+xml;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICJhOTRkZTY1YjY1MTYyOTlhN2UzZmM1MTNiZjAzMTdmZC5zdmciOw==\"\n\n//# sourceURL=webpack:///./src/font/iconfont.svg?");
 
 /***/ }),
 
