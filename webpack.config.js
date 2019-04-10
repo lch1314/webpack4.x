@@ -1,10 +1,12 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     mode: 'development',                             
     entry: './src/index.js',                        
     output: {
-        filename: 'bundle.js',                      
+        filename: 'dist.js',                      
         path: path.resolve(__dirname, 'dist')        
     },
     module: {
@@ -41,5 +43,14 @@ module.exports = {
                 use: ['file-loader']
             }
         ]
-    }
+    },
+    plugins: [new HtmlWebpackPlugin(
+        {
+            template: 'src/index.html',
+            filename: 'index.html',
+            minify: {
+                collapseWhitespace: true
+            }
+        }
+    ), new CleanWebpackPlugin()]
 }
