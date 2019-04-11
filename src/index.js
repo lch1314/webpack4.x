@@ -1,1 +1,1 @@
-cosnole.error('I get error!');
+console.log('哈哈哈aaaaaavvvvvv!!')

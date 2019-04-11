@@ -10,7 +10,16 @@ module.exports = {
     },                        
     output: {
         filename: '[name].js',                      
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: '/'
+    },
+    devServer: {
+        contentBase: './dist',
+        open: true,
+        port: 8080,
+        proxy: {
+            '/api:': 'http://localhost:3000'
+        }
     },
     module: {
         rules: [
