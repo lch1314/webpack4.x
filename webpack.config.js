@@ -3,15 +3,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-    mode: 'development',                             
+    mode: 'development', 
+    devtool: 'heap-module-eval-source-map',                            
     entry: {
         main: './src/index.js',
-        sub: './src/index.js'
     },                        
     output: {
         filename: '[name].js',                      
-        path: path.resolve(__dirname, 'dist'),
-        publicPath: 'http://cdn.com.cn'        
+        path: path.resolve(__dirname, 'dist')
     },
     module: {
         rules: [
@@ -51,6 +50,7 @@ module.exports = {
     plugins: [new HtmlWebpackPlugin(
         {
             template: 'src/index.html',
+            title: 'test App',
             filename: 'index.html',
             minify: {
                 collapseWhitespace: true

@@ -1,3 +1,1 @@
-var root = document.getElementById('root');
-import './index.scss'
-root.innerHTML = '<div class="iconfont iconyanxianbi"></div>'
+cosnole.error('I get error!');
