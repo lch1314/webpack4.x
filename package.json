@@ -4,10 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
-    "bundle": "webpack",
-    "watch": "webpack --watch",
-    "start": "webpack-dev-server",
-    "server": "node server.js"
+    "start": "webpack-dev-server"
   },
   "keywords": [],
   "author": "",
