@@ -1,10 +1,13 @@
-// import "@babel/polyfill";
+import { add } from './math.js';
+import './style.css';
 
-const arr = [
-    new Promise(() => {}),
-    new Promise(() => {})
-];
+var root = document.getElementById('root')
+var div = document.createElement('div')
+div.className = 'box'
+root.appendChild(div)
 
-arr.map(item => {
-    console.log(item)
-})
+
+add(1, 2)
+
+
+

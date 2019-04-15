@@ -3,16 +3,22 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
 
+
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')       // 默认打包后只能插入<style>标签内，这个插件可以将css单独打包成文件，以<link>形式引入
+const PurifyCSS = require('purifycss-webpack');
+const glob = require('glob-all');
+
 module.exports = {
     mode: 'development', 
-    devtool: 'heap-module-eval-source-map',                            
+    devtool: 'cheap-module-eval-source-map',  
+    // mode: 'production', 
+    // devtool: 'cheap-module-source-map',  
     entry: {
         main: './src/index.js',
     },                        
     output: {
         filename: '[name].js',                      
         path: path.resolve(__dirname, 'dist'),
-        publicPath: '/'
     },
     devServer: {
         contentBase: './dist',
@@ -61,7 +67,8 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
-                    'style-loader',
+                    MiniCssExtractPlugin.loader,
+                    // 'style-loader',                            // 设置MiniCssExtractPlugin.loader后需要去掉这个loader
                     'css-loader', 
                     'postcss-loader'
                 ]
@@ -72,6 +79,9 @@ module.exports = {
             }
         ]
     },
+    // optimization: {
+    //     usedExports: true
+    // },
     plugins: [
         new HtmlWebpackPlugin(
             {
@@ -84,6 +94,15 @@ module.exports = {
             }
         ), 
         new CleanWebpackPlugin(), 
-        new webpack.HotModuleReplacementPlugin()        // webapck内置插件
+        new webpack.HotModuleReplacementPlugin(),  
+        new MiniCssExtractPlugin({
+            filename: '[name].css'                         // 打包后的css文件名
+        }),     
+        new PurifyCSS({
+            paths: glob.sync([
+                // 要做CSS TreeShaking的文件
+                path.resolve(__dirname, './src/*.js')
+            ])
+        })
     ]
 }
