@@ -2,13 +2,17 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')   
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserJSPlugin = require('terser-webpack-plugin');
 
 module.exports = { 
     entry: {
         main: './src/index.js',
+        sub: './src/index1.js'
     },                        
     output: {
-        filename: '[name].js',                      
+        filename: '[name].js', 
+        chunkFilename: '[name].chunk.js',                     
         path: path.resolve(__dirname, '../dist'),
     },
     module: {
@@ -34,7 +38,7 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [
-                    'style-loader', 
+                    MiniCssExtractPlugin.loader,
                     {
                         loader: 'css-loader',
                         options: {
@@ -73,7 +77,8 @@ module.exports = {
         ), 
         new CleanWebpackPlugin(), 
         new MiniCssExtractPlugin({
-            filename: '[name].css'                       
+            filename: '[name].css',
+            chunkFilename: '[name].chunk.css'                       
         })
     ],
     optimization: {
@@ -96,8 +101,18 @@ module.exports = {
                 priority: -20,
                 reuseExistingChunk: true,
                 filename: 'common.js'
-              }
+              },
+              styles: {
+                name: 'styles',
+                test: /\.css$/,
+                chunks: 'all',
+                enforce: true,
+              },
             }
-        }
+        },
+        minimizer: [
+            new TerserJSPlugin({}), 
+            new OptimizeCSSAssetsPlugin({})
+        ]
     }
 }

@@ -2,25 +2,39 @@
   "errors": [],
   "warnings": [],
   "version": "4.29.6",
-  "hash": "6a25d80222f7987cc891",
-  "time": 1318,
-  "builtAt": 1555573554979,
+  "hash": "5c091f7d7c9ed92a968c",
+  "time": 1841,
+  "builtAt": 1555654559297,
   "publicPath": "",
   "outputPath": "E:\\Code\\webpack4.0\\webpack-demo\\dist",
   "assetsByChunkName": {
-    "main": "main.js"
+    "main": [
+      "main.css",
+      "main.js"
+    ]
   },
   "assets": [
     {
       "name": "index.html",
-      "size": 304,
+      "size": 343,
       "chunks": [],
       "chunkNames": [],
       "emitted": true
     },
     {
+      "name": "main.css",
+      "size": 71,
+      "chunks": [
+        "main"
+      ],
+      "chunkNames": [
+        "main"
+      ],
+      "emitted": true
+    },
+    {
       "name": "main.js",
-      "size": 31033,
+      "size": 31716,
       "chunks": [
         "main"
       ],
@@ -37,6 +51,7 @@
         "main"
       ],
       "assets": [
+        "main.css",
         "main.js"
       ],
       "children": {},
@@ -49,6 +64,7 @@
         "main"
       ],
       "assets": [
+        "main.css",
         "main.js"
       ],
       "children": {},
@@ -61,14 +77,15 @@
       "rendered": true,
       "initial": true,
       "entry": true,
-      "size": 508,
+      "size": 191,
       "names": [
         "main"
       ],
       "files": [
+        "main.css",
         "main.js"
       ],
-      "hash": "0bc82aea5665c46a70ec",
+      "hash": "1861a0bc6aef692dad87",
       "siblings": [],
       "parents": [],
       "children": [],
@@ -79,8 +96,8 @@
           "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\babel-loader\\lib\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\index.js",
           "name": "./src/index.js",
           "index": 0,
-          "index2": 0,
-          "size": 508,
+          "index2": 4,
+          "size": 44,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -93,8 +110,8 @@
           "issuerName": null,
           "issuerPath": null,
           "profile": {
-            "factory": 79,
-            "building": 604
+            "factory": 62,
+            "building": 500
           },
           "failed": false,
           "errors": 0,
@@ -112,10 +129,230 @@
             }
           ],
           "usedExports": true,
-          "providedExports": null,
+          "providedExports": [],
           "optimizationBailout": [],
           "depth": 0,
-          "source": "// async function getComponent() {\n//     const { default: _ } = await import(/*webpackChunkName:\"lodash\" */'lodash');\n//     const ele = document.createElement('div');\n//     ele.innerHTML = _.join(['Hello', 'World'], '-');\n//     return ele;\n// }\ndocument.addEventListener('click', () => {\n  // getComponent().then(ele => {\n  //     document.body.appendChild(ele);\n  // })\n  const ele = document.createElement('div');\n  ele.innerHTML = _.join(['Hello', 'World'], '-');\n  document.body.appendChild(ele);\n});"
+          "source": "import './style.css';\nimport './style1.css';"
+        },
+        {
+          "id": "./src/style.css",
+          "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style.css",
+          "name": "./src/style.css",
+          "index": 1,
+          "index2": 1,
+          "size": 39,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "main"
+          ],
+          "issuer": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\babel-loader\\lib\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\index.js",
+          "issuerId": "./src/index.js",
+          "issuerName": "./src/index.js",
+          "issuerPath": [
+            {
+              "id": "./src/index.js",
+              "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\babel-loader\\lib\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\index.js",
+              "name": "./src/index.js",
+              "profile": {
+                "factory": 62,
+                "building": 500
+              }
+            }
+          ],
+          "profile": {
+            "factory": 19,
+            "building": 976
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": "./src/index.js",
+              "moduleIdentifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\babel-loader\\lib\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\index.js",
+              "module": "./src/index.js",
+              "moduleName": "./src/index.js",
+              "type": "harmony side effect evaluation",
+              "userRequest": "./style.css",
+              "loc": "1:0-21"
+            }
+          ],
+          "usedExports": false,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 1,
+          "source": "// extracted by mini-css-extract-plugin"
+        },
+        {
+          "id": "./src/style1.css",
+          "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style1.css",
+          "name": "./src/style1.css",
+          "index": 3,
+          "index2": 3,
+          "size": 39,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "main"
+          ],
+          "issuer": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\babel-loader\\lib\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\index.js",
+          "issuerId": "./src/index.js",
+          "issuerName": "./src/index.js",
+          "issuerPath": [
+            {
+              "id": "./src/index.js",
+              "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\babel-loader\\lib\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\index.js",
+              "name": "./src/index.js",
+              "profile": {
+                "factory": 62,
+                "building": 500
+              }
+            }
+          ],
+          "profile": {
+            "factory": 19,
+            "building": 976
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": "./src/index.js",
+              "moduleIdentifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\babel-loader\\lib\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\index.js",
+              "module": "./src/index.js",
+              "moduleName": "./src/index.js",
+              "type": "harmony side effect evaluation",
+              "userRequest": "./style1.css",
+              "loc": "2:0-22"
+            }
+          ],
+          "usedExports": false,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 1,
+          "source": "// extracted by mini-css-extract-plugin"
+        },
+        {
+          "id": "?bdfd",
+          "identifier": "css E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style1.css 0",
+          "name": "css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src!./src/style1.css",
+          "index": 4,
+          "index2": 2,
+          "size": 32,
+          "built": false,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "main"
+          ],
+          "issuer": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style1.css",
+          "issuerId": "./src/style1.css",
+          "issuerName": "./src/style1.css",
+          "issuerPath": [
+            {
+              "id": "./src/index.js",
+              "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\babel-loader\\lib\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\index.js",
+              "name": "./src/index.js",
+              "profile": {
+                "factory": 62,
+                "building": 500
+              }
+            },
+            {
+              "id": "./src/style1.css",
+              "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style1.css",
+              "name": "./src/style1.css",
+              "profile": {
+                "factory": 19,
+                "building": 976
+              }
+            }
+          ],
+          "profile": {
+            "factory": 0,
+            "building": 0
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": "./src/style1.css",
+              "moduleIdentifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style1.css",
+              "module": "./src/style1.css",
+              "moduleName": "./src/style1.css"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 2
+        },
+        {
+          "id": "?be14",
+          "identifier": "css E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style.css 0",
+          "name": "css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src!./src/style.css",
+          "index": 2,
+          "index2": 0,
+          "size": 37,
+          "built": false,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "main"
+          ],
+          "issuer": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style.css",
+          "issuerId": "./src/style.css",
+          "issuerName": "./src/style.css",
+          "issuerPath": [
+            {
+              "id": "./src/index.js",
+              "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\babel-loader\\lib\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\index.js",
+              "name": "./src/index.js",
+              "profile": {
+                "factory": 62,
+                "building": 500
+              }
+            },
+            {
+              "id": "./src/style.css",
+              "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style.css",
+              "name": "./src/style.css",
+              "profile": {
+                "factory": 19,
+                "building": 976
+              }
+            }
+          ],
+          "profile": {
+            "factory": 1,
+            "building": 0
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": "./src/style.css",
+              "moduleIdentifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style.css",
+              "module": "./src/style.css",
+              "moduleName": "./src/style.css"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 2
         }
       ],
       "filteredModules": 0,
@@ -137,8 +374,8 @@
       "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\babel-loader\\lib\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\index.js",
       "name": "./src/index.js",
       "index": 0,
-      "index2": 0,
-      "size": 508,
+      "index2": 4,
+      "size": 44,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -151,8 +388,8 @@
       "issuerName": null,
       "issuerPath": null,
       "profile": {
-        "factory": 79,
-        "building": 604
+        "factory": 62,
+        "building": 500
       },
       "failed": false,
       "errors": 0,
@@ -170,10 +407,230 @@
         }
       ],
       "usedExports": true,
-      "providedExports": null,
+      "providedExports": [],
       "optimizationBailout": [],
       "depth": 0,
-      "source": "// async function getComponent() {\n//     const { default: _ } = await import(/*webpackChunkName:\"lodash\" */'lodash');\n//     const ele = document.createElement('div');\n//     ele.innerHTML = _.join(['Hello', 'World'], '-');\n//     return ele;\n// }\ndocument.addEventListener('click', () => {\n  // getComponent().then(ele => {\n  //     document.body.appendChild(ele);\n  // })\n  const ele = document.createElement('div');\n  ele.innerHTML = _.join(['Hello', 'World'], '-');\n  document.body.appendChild(ele);\n});"
+      "source": "import './style.css';\nimport './style1.css';"
+    },
+    {
+      "id": "./src/style.css",
+      "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style.css",
+      "name": "./src/style.css",
+      "index": 1,
+      "index2": 1,
+      "size": 39,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "main"
+      ],
+      "issuer": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\babel-loader\\lib\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\index.js",
+      "issuerId": "./src/index.js",
+      "issuerName": "./src/index.js",
+      "issuerPath": [
+        {
+          "id": "./src/index.js",
+          "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\babel-loader\\lib\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\index.js",
+          "name": "./src/index.js",
+          "profile": {
+            "factory": 62,
+            "building": 500
+          }
+        }
+      ],
+      "profile": {
+        "factory": 19,
+        "building": 976
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": "./src/index.js",
+          "moduleIdentifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\babel-loader\\lib\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\index.js",
+          "module": "./src/index.js",
+          "moduleName": "./src/index.js",
+          "type": "harmony side effect evaluation",
+          "userRequest": "./style.css",
+          "loc": "1:0-21"
+        }
+      ],
+      "usedExports": false,
+      "providedExports": null,
+      "optimizationBailout": [],
+      "depth": 1,
+      "source": "// extracted by mini-css-extract-plugin"
+    },
+    {
+      "id": "./src/style1.css",
+      "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style1.css",
+      "name": "./src/style1.css",
+      "index": 3,
+      "index2": 3,
+      "size": 39,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "main"
+      ],
+      "issuer": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\babel-loader\\lib\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\index.js",
+      "issuerId": "./src/index.js",
+      "issuerName": "./src/index.js",
+      "issuerPath": [
+        {
+          "id": "./src/index.js",
+          "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\babel-loader\\lib\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\index.js",
+          "name": "./src/index.js",
+          "profile": {
+            "factory": 62,
+            "building": 500
+          }
+        }
+      ],
+      "profile": {
+        "factory": 19,
+        "building": 976
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": "./src/index.js",
+          "moduleIdentifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\babel-loader\\lib\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\index.js",
+          "module": "./src/index.js",
+          "moduleName": "./src/index.js",
+          "type": "harmony side effect evaluation",
+          "userRequest": "./style1.css",
+          "loc": "2:0-22"
+        }
+      ],
+      "usedExports": false,
+      "providedExports": null,
+      "optimizationBailout": [],
+      "depth": 1,
+      "source": "// extracted by mini-css-extract-plugin"
+    },
+    {
+      "id": "?bdfd",
+      "identifier": "css E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style1.css 0",
+      "name": "css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src!./src/style1.css",
+      "index": 4,
+      "index2": 2,
+      "size": 32,
+      "built": false,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "main"
+      ],
+      "issuer": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style1.css",
+      "issuerId": "./src/style1.css",
+      "issuerName": "./src/style1.css",
+      "issuerPath": [
+        {
+          "id": "./src/index.js",
+          "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\babel-loader\\lib\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\index.js",
+          "name": "./src/index.js",
+          "profile": {
+            "factory": 62,
+            "building": 500
+          }
+        },
+        {
+          "id": "./src/style1.css",
+          "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style1.css",
+          "name": "./src/style1.css",
+          "profile": {
+            "factory": 19,
+            "building": 976
+          }
+        }
+      ],
+      "profile": {
+        "factory": 0,
+        "building": 0
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": "./src/style1.css",
+          "moduleIdentifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style1.css",
+          "module": "./src/style1.css",
+          "moduleName": "./src/style1.css"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [],
+      "depth": 2
+    },
+    {
+      "id": "?be14",
+      "identifier": "css E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style.css 0",
+      "name": "css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src!./src/style.css",
+      "index": 2,
+      "index2": 0,
+      "size": 37,
+      "built": false,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "main"
+      ],
+      "issuer": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style.css",
+      "issuerId": "./src/style.css",
+      "issuerName": "./src/style.css",
+      "issuerPath": [
+        {
+          "id": "./src/index.js",
+          "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\babel-loader\\lib\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\index.js",
+          "name": "./src/index.js",
+          "profile": {
+            "factory": 62,
+            "building": 500
+          }
+        },
+        {
+          "id": "./src/style.css",
+          "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style.css",
+          "name": "./src/style.css",
+          "profile": {
+            "factory": 19,
+            "building": 976
+          }
+        }
+      ],
+      "profile": {
+        "factory": 1,
+        "building": 0
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": "./src/style.css",
+          "moduleIdentifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style.css",
+          "module": "./src/style.css",
+          "moduleName": "./src/style.css"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [],
+      "depth": 2
     }
   ],
   "filteredModules": 0,
@@ -256,8 +713,8 @@
               "issuerName": null,
               "issuerPath": null,
               "profile": {
-                "factory": 53,
-                "building": 29
+                "factory": 39,
+                "building": 26
               },
               "failed": false,
               "errors": 0,
@@ -302,14 +759,14 @@
                   "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\html-webpack-plugin\\lib\\loader.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\index.html",
                   "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
                   "profile": {
-                    "factory": 53,
-                    "building": 29
+                    "factory": 39,
+                    "building": 26
                   }
                 }
               ],
               "profile": {
-                "factory": 3,
-                "building": 819
+                "factory": 4,
+                "building": 823
               },
               "failed": false,
               "errors": 0,
@@ -355,8 +812,8 @@
                   "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\html-webpack-plugin\\lib\\loader.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\index.html",
                   "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
                   "profile": {
-                    "factory": 53,
-                    "building": 29
+                    "factory": 39,
+                    "building": 26
                   }
                 },
                 {
@@ -364,14 +821,14 @@
                   "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\lodash\\lodash.js",
                   "name": "./node_modules/lodash/lodash.js",
                   "profile": {
-                    "factory": 3,
-                    "building": 819
+                    "factory": 4,
+                    "building": 823
                   }
                 }
               ],
               "profile": {
-                "factory": 25,
-                "building": 6
+                "factory": 581,
+                "building": 3
               },
               "failed": false,
               "errors": 0,
@@ -417,8 +874,8 @@
                   "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\html-webpack-plugin\\lib\\loader.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\index.html",
                   "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
                   "profile": {
-                    "factory": 53,
-                    "building": 29
+                    "factory": 39,
+                    "building": 26
                   }
                 },
                 {
@@ -426,14 +883,14 @@
                   "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\lodash\\lodash.js",
                   "name": "./node_modules/lodash/lodash.js",
                   "profile": {
-                    "factory": 3,
-                    "building": 819
+                    "factory": 4,
+                    "building": 823
                   }
                 }
               ],
               "profile": {
-                "factory": 25,
-                "building": 6
+                "factory": 581,
+                "building": 3
               },
               "failed": false,
               "errors": 0,
@@ -490,8 +947,8 @@
           "issuerName": null,
           "issuerPath": null,
           "profile": {
-            "factory": 53,
-            "building": 29
+            "factory": 39,
+            "building": 26
           },
           "failed": false,
           "errors": 0,
@@ -536,14 +993,14 @@
               "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\html-webpack-plugin\\lib\\loader.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\index.html",
               "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
               "profile": {
-                "factory": 53,
-                "building": 29
+                "factory": 39,
+                "building": 26
               }
             }
           ],
           "profile": {
-            "factory": 3,
-            "building": 819
+            "factory": 4,
+            "building": 823
           },
           "failed": false,
           "errors": 0,
@@ -589,8 +1046,8 @@
               "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\html-webpack-plugin\\lib\\loader.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\index.html",
               "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
               "profile": {
-                "factory": 53,
-                "building": 29
+                "factory": 39,
+                "building": 26
               }
             },
             {
@@ -598,14 +1055,14 @@
               "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\lodash\\lodash.js",
               "name": "./node_modules/lodash/lodash.js",
               "profile": {
-                "factory": 3,
-                "building": 819
+                "factory": 4,
+                "building": 823
               }
             }
           ],
           "profile": {
-            "factory": 25,
-            "building": 6
+            "factory": 581,
+            "building": 3
           },
           "failed": false,
           "errors": 0,
@@ -651,8 +1108,8 @@
               "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\html-webpack-plugin\\lib\\loader.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\index.html",
               "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
               "profile": {
-                "factory": 53,
-                "building": 29
+                "factory": 39,
+                "building": 26
               }
             },
             {
@@ -660,14 +1117,14 @@
               "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\lodash\\lodash.js",
               "name": "./node_modules/lodash/lodash.js",
               "profile": {
-                "factory": 3,
-                "building": 819
+                "factory": 4,
+                "building": 823
               }
             }
           ],
           "profile": {
-            "factory": 25,
-            "building": 6
+            "factory": 581,
+            "building": 3
           },
           "failed": false,
           "errors": 0,
@@ -694,6 +1151,532 @@
       "filteredModules": 0,
       "children": [],
       "name": "html-webpack-plugin for \"index.html\""
+    },
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "",
+      "outputPath": "E:\\Code\\webpack4.0\\webpack-demo\\dist",
+      "assetsByChunkName": {},
+      "assets": [],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            "mini-css-extract-plugin"
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            "mini-css-extract-plugin"
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "chunks": [
+        {
+          "id": "mini-css-extract-plugin",
+          "rendered": true,
+          "initial": true,
+          "entry": true,
+          "size": 2586,
+          "names": [
+            "mini-css-extract-plugin"
+          ],
+          "files": [
+            "*"
+          ],
+          "hash": "15c70ce6ff45c3f35067",
+          "siblings": [],
+          "parents": [],
+          "children": [],
+          "childrenByOrder": {},
+          "modules": [
+            {
+              "id": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./src/style.css",
+              "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style.css",
+              "name": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src!./src/style.css",
+              "index": 0,
+              "index2": 1,
+              "size": 180,
+              "cacheable": true,
+              "built": true,
+              "optional": false,
+              "prefetched": false,
+              "chunks": [
+                "mini-css-extract-plugin"
+              ],
+              "issuer": null,
+              "issuerId": null,
+              "issuerName": null,
+              "issuerPath": null,
+              "profile": {
+                "factory": 3,
+                "building": 876
+              },
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "assets": [],
+              "reasons": [
+                {
+                  "moduleId": null,
+                  "moduleIdentifier": null,
+                  "module": null,
+                  "moduleName": null,
+                  "type": "single entry",
+                  "userRequest": "!!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style.css",
+                  "loc": "mini-css-extract-plugin"
+                }
+              ],
+              "usedExports": true,
+              "providedExports": null,
+              "optimizationBailout": [],
+              "depth": 0,
+              "source": "exports = module.exports = require(\"../node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.id, \"body {\\r\\n    background-color: red;\\r\\n}\", \"\"]);\n\n"
+            },
+            {
+              "id": "./node_modules/css-loader/dist/runtime/api.js",
+              "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\runtime\\api.js",
+              "name": "./node_modules/css-loader/dist/runtime/api.js",
+              "index": 1,
+              "index2": 0,
+              "size": 2406,
+              "cacheable": true,
+              "built": true,
+              "optional": false,
+              "prefetched": false,
+              "chunks": [
+                "mini-css-extract-plugin"
+              ],
+              "issuer": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style.css",
+              "issuerId": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./src/style.css",
+              "issuerName": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src!./src/style.css",
+              "issuerPath": [
+                {
+                  "id": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./src/style.css",
+                  "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style.css",
+                  "name": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src!./src/style.css",
+                  "profile": {
+                    "factory": 3,
+                    "building": 876
+                  }
+                }
+              ],
+              "profile": {
+                "factory": 6,
+                "building": 73
+              },
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "assets": [],
+              "reasons": [
+                {
+                  "moduleId": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./src/style.css",
+                  "moduleIdentifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style.css",
+                  "module": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src!./src/style.css",
+                  "moduleName": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src!./src/style.css",
+                  "type": "cjs require",
+                  "userRequest": "../node_modules/css-loader/dist/runtime/api.js",
+                  "loc": "1:27-84"
+                }
+              ],
+              "usedExports": true,
+              "providedExports": null,
+              "optimizationBailout": [],
+              "depth": 1,
+              "source": "\"use strict\";\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n  Author Tobias Koppers @sokra\n*/\n// css base code, injected by the css-loader\nmodule.exports = function (useSourceMap) {\n  var list = []; // return the list of modules as css string\n\n  list.toString = function toString() {\n    return this.map(function (item) {\n      var content = cssWithMappingToString(item, useSourceMap);\n\n      if (item[2]) {\n        return '@media ' + item[2] + '{' + content + '}';\n      } else {\n        return content;\n      }\n    }).join('');\n  }; // import a list of modules into the list\n\n\n  list.i = function (modules, mediaQuery) {\n    if (typeof modules === 'string') {\n      modules = [[null, modules, '']];\n    }\n\n    var alreadyImportedModules = {};\n\n    for (var i = 0; i < this.length; i++) {\n      var id = this[i][0];\n\n      if (id != null) {\n        alreadyImportedModules[id] = true;\n      }\n    }\n\n    for (i = 0; i < modules.length; i++) {\n      var item = modules[i]; // skip already imported module\n      // this implementation is not 100% perfect for weird media query combinations\n      // when a module is imported multiple times with different media queries.\n      // I hope this will never occur (Hey this way we have smaller bundles)\n\n      if (item[0] == null || !alreadyImportedModules[item[0]]) {\n        if (mediaQuery && !item[2]) {\n          item[2] = mediaQuery;\n        } else if (mediaQuery) {\n          item[2] = '(' + item[2] + ') and (' + mediaQuery + ')';\n        }\n\n        list.push(item);\n      }\n    }\n  };\n\n  return list;\n};\n\nfunction cssWithMappingToString(item, useSourceMap) {\n  var content = item[1] || '';\n  var cssMapping = item[3];\n\n  if (!cssMapping) {\n    return content;\n  }\n\n  if (useSourceMap && typeof btoa === 'function') {\n    var sourceMapping = toComment(cssMapping);\n    var sourceURLs = cssMapping.sources.map(function (source) {\n      return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */';\n    });\n    return [content].concat(sourceURLs).concat([sourceMapping]).join('\\n');\n  }\n\n  return [content].join('\\n');\n} // Adapted from convert-source-map (MIT)\n\n\nfunction toComment(sourceMap) {\n  // eslint-disable-next-line no-undef\n  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));\n  var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;\n  return '/*# ' + data + ' */';\n}"
+            }
+          ],
+          "filteredModules": 0,
+          "origins": [
+            {
+              "module": "",
+              "moduleIdentifier": "",
+              "moduleName": "",
+              "loc": "mini-css-extract-plugin",
+              "request": "!!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style.css",
+              "reasons": []
+            }
+          ]
+        }
+      ],
+      "modules": [
+        {
+          "id": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./src/style.css",
+          "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style.css",
+          "name": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src!./src/style.css",
+          "index": 0,
+          "index2": 1,
+          "size": 180,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "mini-css-extract-plugin"
+          ],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "issuerPath": null,
+          "profile": {
+            "factory": 3,
+            "building": 876
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": null,
+              "moduleIdentifier": null,
+              "module": null,
+              "moduleName": null,
+              "type": "single entry",
+              "userRequest": "!!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style.css",
+              "loc": "mini-css-extract-plugin"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 0,
+          "source": "exports = module.exports = require(\"../node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.id, \"body {\\r\\n    background-color: red;\\r\\n}\", \"\"]);\n\n"
+        },
+        {
+          "id": "./node_modules/css-loader/dist/runtime/api.js",
+          "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\runtime\\api.js",
+          "name": "./node_modules/css-loader/dist/runtime/api.js",
+          "index": 1,
+          "index2": 0,
+          "size": 2406,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "mini-css-extract-plugin"
+          ],
+          "issuer": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style.css",
+          "issuerId": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./src/style.css",
+          "issuerName": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src!./src/style.css",
+          "issuerPath": [
+            {
+              "id": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./src/style.css",
+              "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style.css",
+              "name": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src!./src/style.css",
+              "profile": {
+                "factory": 3,
+                "building": 876
+              }
+            }
+          ],
+          "profile": {
+            "factory": 6,
+            "building": 73
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./src/style.css",
+              "moduleIdentifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style.css",
+              "module": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src!./src/style.css",
+              "moduleName": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src!./src/style.css",
+              "type": "cjs require",
+              "userRequest": "../node_modules/css-loader/dist/runtime/api.js",
+              "loc": "1:27-84"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 1,
+          "source": "\"use strict\";\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n  Author Tobias Koppers @sokra\n*/\n// css base code, injected by the css-loader\nmodule.exports = function (useSourceMap) {\n  var list = []; // return the list of modules as css string\n\n  list.toString = function toString() {\n    return this.map(function (item) {\n      var content = cssWithMappingToString(item, useSourceMap);\n\n      if (item[2]) {\n        return '@media ' + item[2] + '{' + content + '}';\n      } else {\n        return content;\n      }\n    }).join('');\n  }; // import a list of modules into the list\n\n\n  list.i = function (modules, mediaQuery) {\n    if (typeof modules === 'string') {\n      modules = [[null, modules, '']];\n    }\n\n    var alreadyImportedModules = {};\n\n    for (var i = 0; i < this.length; i++) {\n      var id = this[i][0];\n\n      if (id != null) {\n        alreadyImportedModules[id] = true;\n      }\n    }\n\n    for (i = 0; i < modules.length; i++) {\n      var item = modules[i]; // skip already imported module\n      // this implementation is not 100% perfect for weird media query combinations\n      // when a module is imported multiple times with different media queries.\n      // I hope this will never occur (Hey this way we have smaller bundles)\n\n      if (item[0] == null || !alreadyImportedModules[item[0]]) {\n        if (mediaQuery && !item[2]) {\n          item[2] = mediaQuery;\n        } else if (mediaQuery) {\n          item[2] = '(' + item[2] + ') and (' + mediaQuery + ')';\n        }\n\n        list.push(item);\n      }\n    }\n  };\n\n  return list;\n};\n\nfunction cssWithMappingToString(item, useSourceMap) {\n  var content = item[1] || '';\n  var cssMapping = item[3];\n\n  if (!cssMapping) {\n    return content;\n  }\n\n  if (useSourceMap && typeof btoa === 'function') {\n    var sourceMapping = toComment(cssMapping);\n    var sourceURLs = cssMapping.sources.map(function (source) {\n      return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */';\n    });\n    return [content].concat(sourceURLs).concat([sourceMapping]).join('\\n');\n  }\n\n  return [content].join('\\n');\n} // Adapted from convert-source-map (MIT)\n\n\nfunction toComment(sourceMap) {\n  // eslint-disable-next-line no-undef\n  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));\n  var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;\n  return '/*# ' + data + ' */';\n}"
+        }
+      ],
+      "filteredModules": 0,
+      "children": [],
+      "name": "mini-css-extract-plugin node_modules/css-loader/dist/cjs.js!node_modules/postcss-loader/src/index.js!src/style.css"
+    },
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "",
+      "outputPath": "E:\\Code\\webpack4.0\\webpack-demo\\dist",
+      "assetsByChunkName": {},
+      "assets": [],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            "mini-css-extract-plugin"
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            "mini-css-extract-plugin"
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "chunks": [
+        {
+          "id": "mini-css-extract-plugin",
+          "rendered": true,
+          "initial": true,
+          "entry": true,
+          "size": 2581,
+          "names": [
+            "mini-css-extract-plugin"
+          ],
+          "files": [
+            "*"
+          ],
+          "hash": "415901e1e47a0a86c7e3",
+          "siblings": [],
+          "parents": [],
+          "children": [],
+          "childrenByOrder": {},
+          "modules": [
+            {
+              "id": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./src/style1.css",
+              "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style1.css",
+              "name": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src!./src/style1.css",
+              "index": 0,
+              "index2": 1,
+              "size": 175,
+              "cacheable": true,
+              "built": true,
+              "optional": false,
+              "prefetched": false,
+              "chunks": [
+                "mini-css-extract-plugin"
+              ],
+              "issuer": null,
+              "issuerId": null,
+              "issuerName": null,
+              "issuerPath": null,
+              "profile": {
+                "factory": 97,
+                "building": 783
+              },
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "assets": [],
+              "reasons": [
+                {
+                  "moduleId": null,
+                  "moduleIdentifier": null,
+                  "module": null,
+                  "moduleName": null,
+                  "type": "single entry",
+                  "userRequest": "!!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style1.css",
+                  "loc": "mini-css-extract-plugin"
+                }
+              ],
+              "usedExports": true,
+              "providedExports": null,
+              "optimizationBailout": [],
+              "depth": 0,
+              "source": "exports = module.exports = require(\"../node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.id, \"body {\\r\\n    font-size: 100px;\\r\\n}\", \"\"]);\n\n"
+            },
+            {
+              "id": "./node_modules/css-loader/dist/runtime/api.js",
+              "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\runtime\\api.js",
+              "name": "./node_modules/css-loader/dist/runtime/api.js",
+              "index": 1,
+              "index2": 0,
+              "size": 2406,
+              "cacheable": true,
+              "built": true,
+              "optional": false,
+              "prefetched": false,
+              "chunks": [
+                "mini-css-extract-plugin"
+              ],
+              "issuer": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style1.css",
+              "issuerId": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./src/style1.css",
+              "issuerName": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src!./src/style1.css",
+              "issuerPath": [
+                {
+                  "id": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./src/style1.css",
+                  "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style1.css",
+                  "name": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src!./src/style1.css",
+                  "profile": {
+                    "factory": 97,
+                    "building": 783
+                  }
+                }
+              ],
+              "profile": {
+                "factory": 3,
+                "building": 75
+              },
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "assets": [],
+              "reasons": [
+                {
+                  "moduleId": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./src/style1.css",
+                  "moduleIdentifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style1.css",
+                  "module": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src!./src/style1.css",
+                  "moduleName": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src!./src/style1.css",
+                  "type": "cjs require",
+                  "userRequest": "../node_modules/css-loader/dist/runtime/api.js",
+                  "loc": "1:27-84"
+                }
+              ],
+              "usedExports": true,
+              "providedExports": null,
+              "optimizationBailout": [],
+              "depth": 1,
+              "source": "\"use strict\";\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n  Author Tobias Koppers @sokra\n*/\n// css base code, injected by the css-loader\nmodule.exports = function (useSourceMap) {\n  var list = []; // return the list of modules as css string\n\n  list.toString = function toString() {\n    return this.map(function (item) {\n      var content = cssWithMappingToString(item, useSourceMap);\n\n      if (item[2]) {\n        return '@media ' + item[2] + '{' + content + '}';\n      } else {\n        return content;\n      }\n    }).join('');\n  }; // import a list of modules into the list\n\n\n  list.i = function (modules, mediaQuery) {\n    if (typeof modules === 'string') {\n      modules = [[null, modules, '']];\n    }\n\n    var alreadyImportedModules = {};\n\n    for (var i = 0; i < this.length; i++) {\n      var id = this[i][0];\n\n      if (id != null) {\n        alreadyImportedModules[id] = true;\n      }\n    }\n\n    for (i = 0; i < modules.length; i++) {\n      var item = modules[i]; // skip already imported module\n      // this implementation is not 100% perfect for weird media query combinations\n      // when a module is imported multiple times with different media queries.\n      // I hope this will never occur (Hey this way we have smaller bundles)\n\n      if (item[0] == null || !alreadyImportedModules[item[0]]) {\n        if (mediaQuery && !item[2]) {\n          item[2] = mediaQuery;\n        } else if (mediaQuery) {\n          item[2] = '(' + item[2] + ') and (' + mediaQuery + ')';\n        }\n\n        list.push(item);\n      }\n    }\n  };\n\n  return list;\n};\n\nfunction cssWithMappingToString(item, useSourceMap) {\n  var content = item[1] || '';\n  var cssMapping = item[3];\n\n  if (!cssMapping) {\n    return content;\n  }\n\n  if (useSourceMap && typeof btoa === 'function') {\n    var sourceMapping = toComment(cssMapping);\n    var sourceURLs = cssMapping.sources.map(function (source) {\n      return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */';\n    });\n    return [content].concat(sourceURLs).concat([sourceMapping]).join('\\n');\n  }\n\n  return [content].join('\\n');\n} // Adapted from convert-source-map (MIT)\n\n\nfunction toComment(sourceMap) {\n  // eslint-disable-next-line no-undef\n  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));\n  var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;\n  return '/*# ' + data + ' */';\n}"
+            }
+          ],
+          "filteredModules": 0,
+          "origins": [
+            {
+              "module": "",
+              "moduleIdentifier": "",
+              "moduleName": "",
+              "loc": "mini-css-extract-plugin",
+              "request": "!!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style1.css",
+              "reasons": []
+            }
+          ]
+        }
+      ],
+      "modules": [
+        {
+          "id": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./src/style1.css",
+          "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style1.css",
+          "name": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src!./src/style1.css",
+          "index": 0,
+          "index2": 1,
+          "size": 175,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "mini-css-extract-plugin"
+          ],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "issuerPath": null,
+          "profile": {
+            "factory": 97,
+            "building": 783
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": null,
+              "moduleIdentifier": null,
+              "module": null,
+              "moduleName": null,
+              "type": "single entry",
+              "userRequest": "!!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style1.css",
+              "loc": "mini-css-extract-plugin"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 0,
+          "source": "exports = module.exports = require(\"../node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.id, \"body {\\r\\n    font-size: 100px;\\r\\n}\", \"\"]);\n\n"
+        },
+        {
+          "id": "./node_modules/css-loader/dist/runtime/api.js",
+          "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\runtime\\api.js",
+          "name": "./node_modules/css-loader/dist/runtime/api.js",
+          "index": 1,
+          "index2": 0,
+          "size": 2406,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "mini-css-extract-plugin"
+          ],
+          "issuer": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style1.css",
+          "issuerId": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./src/style1.css",
+          "issuerName": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src!./src/style1.css",
+          "issuerPath": [
+            {
+              "id": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./src/style1.css",
+              "identifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style1.css",
+              "name": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src!./src/style1.css",
+              "profile": {
+                "factory": 97,
+                "building": 783
+              }
+            }
+          ],
+          "profile": {
+            "factory": 3,
+            "building": 75
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./src/style1.css",
+              "moduleIdentifier": "E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\css-loader\\dist\\cjs.js!E:\\Code\\webpack4.0\\webpack-demo\\node_modules\\postcss-loader\\src\\index.js!E:\\Code\\webpack4.0\\webpack-demo\\src\\style1.css",
+              "module": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src!./src/style1.css",
+              "moduleName": "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src!./src/style1.css",
+              "type": "cjs require",
+              "userRequest": "../node_modules/css-loader/dist/runtime/api.js",
+              "loc": "1:27-84"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 1,
+          "source": "\"use strict\";\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n  Author Tobias Koppers @sokra\n*/\n// css base code, injected by the css-loader\nmodule.exports = function (useSourceMap) {\n  var list = []; // return the list of modules as css string\n\n  list.toString = function toString() {\n    return this.map(function (item) {\n      var content = cssWithMappingToString(item, useSourceMap);\n\n      if (item[2]) {\n        return '@media ' + item[2] + '{' + content + '}';\n      } else {\n        return content;\n      }\n    }).join('');\n  }; // import a list of modules into the list\n\n\n  list.i = function (modules, mediaQuery) {\n    if (typeof modules === 'string') {\n      modules = [[null, modules, '']];\n    }\n\n    var alreadyImportedModules = {};\n\n    for (var i = 0; i < this.length; i++) {\n      var id = this[i][0];\n\n      if (id != null) {\n        alreadyImportedModules[id] = true;\n      }\n    }\n\n    for (i = 0; i < modules.length; i++) {\n      var item = modules[i]; // skip already imported module\n      // this implementation is not 100% perfect for weird media query combinations\n      // when a module is imported multiple times with different media queries.\n      // I hope this will never occur (Hey this way we have smaller bundles)\n\n      if (item[0] == null || !alreadyImportedModules[item[0]]) {\n        if (mediaQuery && !item[2]) {\n          item[2] = mediaQuery;\n        } else if (mediaQuery) {\n          item[2] = '(' + item[2] + ') and (' + mediaQuery + ')';\n        }\n\n        list.push(item);\n      }\n    }\n  };\n\n  return list;\n};\n\nfunction cssWithMappingToString(item, useSourceMap) {\n  var content = item[1] || '';\n  var cssMapping = item[3];\n\n  if (!cssMapping) {\n    return content;\n  }\n\n  if (useSourceMap && typeof btoa === 'function') {\n    var sourceMapping = toComment(cssMapping);\n    var sourceURLs = cssMapping.sources.map(function (source) {\n      return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */';\n    });\n    return [content].concat(sourceURLs).concat([sourceMapping]).join('\\n');\n  }\n\n  return [content].join('\\n');\n} // Adapted from convert-source-map (MIT)\n\n\nfunction toComment(sourceMap) {\n  // eslint-disable-next-line no-undef\n  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));\n  var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;\n  return '/*# ' + data + ' */';\n}"
+        }
+      ],
+      "filteredModules": 0,
+      "children": [],
+      "name": "mini-css-extract-plugin node_modules/css-loader/dist/cjs.js!node_modules/postcss-loader/src/index.js!src/style1.css"
     }
   ]
 }
