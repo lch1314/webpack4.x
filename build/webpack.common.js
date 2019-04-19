@@ -7,13 +7,10 @@ const TerserJSPlugin = require('terser-webpack-plugin');
 
 module.exports = { 
     entry: {
-        main: './src/index.js',
-        sub: './src/index1.js'
+        main: './src/index.js'
     },                        
     output: {
-        filename: '[name].js', 
-        chunkFilename: '[name].chunk.js',                     
-        path: path.resolve(__dirname, '../dist'),
+        path: path.resolve(__dirname, '../dist')
     },
     module: {
         rules: [
@@ -94,20 +91,14 @@ module.exports = {
               vendors:  {
                 test: /[\\/]node_modules[\\/]/,
                 priority: -10,
-                // filename: 'vendors.js'
+                filename: 'vendors.js'
               },
               default: {
                 // minChunks: 2,
                 priority: -20,
                 reuseExistingChunk: true,
                 filename: 'common.js'
-              },
-              styles: {
-                name: 'styles',
-                test: /\.css$/,
-                chunks: 'all',
-                enforce: true,
-              },
+              }
             }
         },
         minimizer: [
