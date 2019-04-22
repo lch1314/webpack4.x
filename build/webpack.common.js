@@ -4,6 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')   
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = { 
     entry: {
@@ -17,7 +18,11 @@ module.exports = {
             { 
                 test: /\.js$/, 
                 exclude: /node_modules/, 
-                loader: 'babel-loader'
+                use: [{
+                    loader: 'babel-loader'
+                }, {
+                    loader: 'imports-loader?this=>window'
+                }]
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,
@@ -76,6 +81,10 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '[name].css',
             chunkFilename: '[name].chunk.css'                       
+        }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            _join: ['lodash', 'join']
         })
     ],
     optimization: {
