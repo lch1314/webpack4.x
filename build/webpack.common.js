@@ -1,12 +1,16 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')   
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');   
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const webpack = require('webpack');
+const merge = require('webpack-merge');
+const devConfig = require('./webpack.dev.js');
+const prodConfig = require('./webpack.prod.js');
 
-module.exports = { 
+// module.exports = { 
+const commonConfig = { 
     entry: {
         main: './src/index.js'
     },                        
@@ -114,5 +118,15 @@ module.exports = {
             new TerserJSPlugin({}), 
             new OptimizeCSSAssetsPlugin({})
         ]
+    }
+}
+
+
+// 之前导出的是对象,现在我们导出的是一个函数,函数参数我们可以在webpack命令行环境配置中，通过设置 --env进行配置
+module.exports = env => {
+    if(env && env.production) {
+        return merge(commonConfig, prodConfig);
+    } else {
+        return merge(commonConfig, devConfig);
     }
 }
