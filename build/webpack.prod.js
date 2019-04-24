@@ -1,5 +1,4 @@
-// const merge = require('webpack-merge');
-// const commonConfig = require('./webpack.common.js');
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
 const prodConfig = {
     mode: 'production', 
@@ -7,8 +6,13 @@ const prodConfig = {
     output: {
         filename: '[name].[contenthash].js', 
         chunkFilename: '[name].[contenthash].js', 
-    }
+    },
+    plugins: [
+        new WorkboxPlugin.GenerateSW({
+            clientsClaim: true,
+            skipWaiting: true
+        })
+    ]
 }
 
-// module.exports = merge(commonConfig, prodConfig);
 module.exports = prodConfig;

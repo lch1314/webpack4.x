@@ -4,7 +4,6 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');   
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
-const webpack = require('webpack');
 const merge = require('webpack-merge');
 const devConfig = require('./webpack.dev.js');
 const prodConfig = require('./webpack.prod.js');
@@ -24,8 +23,6 @@ const commonConfig = {
                 exclude: /node_modules/, 
                 use: [{
                     loader: 'babel-loader'
-                }, {
-                    loader: 'imports-loader?this=>window'
                 }]
             },
             {
@@ -85,10 +82,6 @@ const commonConfig = {
         new MiniCssExtractPlugin({
             filename: '[name].css',
             chunkFilename: '[name].chunk.css'                       
-        }),
-        new webpack.ProvidePlugin({
-            $: 'jquery',
-            _join: ['lodash', 'join']
         })
     ],
     optimization: {
